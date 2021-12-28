@@ -1,0 +1,147 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px; /* Base Font Size */
+  background-color: #f3ecea; /* Some base background color */
+}
+
+.container {
+  min-height: 100vh; /* Define minimum height for webpage */
+  display: grid;
+  grid-template-columns: 1fr; /* Only one column for smaller screens */
+  grid-template-rows: 81px 45px 1fr 45px 45px; /* 5 rows: header,nav,body,sidebar,footer */
+}
+
+#heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7996e;
+  color: #888;
+}
+
+.mini-heading {
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+#main-nav ul {
+  padding: 0 20px;
+  height: 45px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1rem;
+}
+
+nav,
+aside {
+  background-color: #666;
+}
+
+#main-nav ul a {
+  text-decoration: none;
+  color: #e4980a;
+  padding: 10px 25px;
+}
+
+#main-nav ul a:hover {
+  background-color: #e4980a;
+  color: #666;
+}
+
+#content {
+  color: #1b1b1b;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+#side-content {
+  padding: 0 20px;
+}
+
+#side-content ul {
+  list-style-type: none;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#ul .fa {
+  font-size: 33px;
+  color: #e4980a;
+  transition: all 2s ease;
+}
+
+#ul .fa:hover {
+  background-color: #e4980a;
+  color: #666;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 25px;
+  align-items: center;
+  background-color: #f7996e;
+  color: #777;
+  transition: all 1s ease-in-out;
+}
+
+#footer:hover {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 75px 1fr 75px;
+    grid-template-areas:
+      "header header header"
+      "navbar maincontent sidebar"
+      "footer footer footer";
+  }
+  #heading {
+    grid-area: header;
+  }
+  #main-nav {
+    grid-area: navbar;
+  }
+  #content {
+    grid-area: maincontent;
+  }
+  #side-content {
+    grid-area: sidebar;
+  }
+  #footer {
+    grid-area: footer;
+  }
+
+  #main-nav ul,
+  #side-content ul {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 auto;
+  }
+
+  #main-nav ul a {
+    padding: 10px;
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+}
