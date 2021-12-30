@@ -1,7 +1,9 @@
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-* {
+*,
+::after,
+::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -13,6 +15,13 @@ body {
   background-color: #f3ecea; /* Some base background color */
 }
 
+p {
+  text-indent: 1rem; /* Start Content with Tab*/
+  font-size: 1.1rem;
+  text-align: justify; /* Justify Content */
+}
+
+/* Holy Grail Layout Mobile - Responsive Layout */
 .container {
   min-height: 100vh; /* Define minimum height for webpage */
   display: grid;
@@ -23,7 +32,7 @@ body {
 #heading {
   font-size: 2rem;
   text-transform: uppercase;
-  display: flex;
+  display: flex; /* Make content float horrizontally without worrying about margins*/
   justify-content: center;
   align-items: center;
   background-color: #f7996e;
@@ -105,6 +114,7 @@ aside {
   color: #555;
 }
 
+/* Holy Grail Layout Desktop - Responsive Styles */
 @media screen and (min-width: 768px) {
   .container {
     grid-template-columns: auto 1fr auto;
@@ -116,6 +126,7 @@ aside {
   }
   #heading {
     grid-area: header;
+    z-index: 3;
   }
   #main-nav {
     grid-area: navbar;
@@ -128,6 +139,7 @@ aside {
   }
   #footer {
     grid-area: footer;
+    z-index: 3;
   }
 
   #main-nav ul,
@@ -138,6 +150,14 @@ aside {
     padding: 0 auto;
   }
 
+  /* Fix sidebars issue of too much gaps / viewport view */
+  /* #main-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  } */
+
   #main-nav ul a {
     padding: 10px;
     display: block;
@@ -145,3 +165,34 @@ aside {
     text-align: center;
   }
 }
+
+/* Tables Styling */
+table {
+  width: 100%;
+  border: 1px solid #888;
+  background-color: #ccc;
+}
+
+th,
+td,
+tr {
+  border: 1px solid #888;
+  padding: 0.2rem;
+}
+
+td:nth-child(odd) {
+  text-transform: capitalize;
+}
+
+/* Zebra Stripes */
+tr:nth-child(odd) {
+  background-color: #666;
+  color: #eee;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+  color: #666;
+}
+
+/* To Do, hide project description on smaller screen to prevent scrolling horrizontally*/
