@@ -29,6 +29,11 @@ body {
   text-align: center;
 }
 
+.heading:hover,
+.heading__cF:hover {
+  color: #f2545b;
+}
+
 ul li {
   list-style-type: none;
   padding: 0.3rem;
@@ -44,6 +49,22 @@ ul li a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  color: #333;
+  transition: all 0.5s linear;
+}
+
+ul li a:hover {
+  font-style: italic;
+  font-weight: 800;
+  background-color: #8c5e58;
+  color: aquamarine;
+}
+
+.active {
+  font-style: italic;
+  font-weight: 800;
+  background-color: #f2545b;
+  color: blanchedalmond;
 }
 
 .btn {
