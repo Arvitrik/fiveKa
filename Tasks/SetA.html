@@ -27,14 +27,35 @@
             <nav class="main-nav__cF">
               <h3 class="heading__cF">Color Flipper</h3>
               <ul class="links__cF">
-                <li><a href="#" class="cFOption simpleCF">Simple</a></li>
-                <li><a href="#" class="cFOption hexCF">hex</a></li>
-                <li><a href="#" class="cFOption rgbCF">rgb</a></li>
+                <li>
+                  <a
+                    href="#"
+                    class="cFOption simpleCF active"
+                    onClick="optionActive(this)"
+                    >Simple</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="cFOption hexCF"
+                    onClick="optionActive(this)"
+                    >hex</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="cFOption rgbCF"
+                    onClick="optionActive(this)"
+                    >rgb</a
+                  >
+                </li>
               </ul>
             </nav>
             <div class="container--body__cF">
               <h3>
-                Background Color : <span class="span-color__cF">#000</span>
+                Background Color : <span class="span-color__cF">Color</span>
               </h3>
               <button class="btn btn__cF" id="btnCF">click me!</button>
             </div>
@@ -47,10 +68,11 @@
       <!-- Start of Next Section -->
 
       <section class="sections set-2">
-        <header class="heading">Task :</header>
+        <header class="heading">Task 2:</header>
         <div class="set--container"></div>
       </section>
       <!-- End of  Section -->
+
       <!-- Start of Next Section -->
       <section class="sections set-3"></section>
       <!-- End of  Section -->

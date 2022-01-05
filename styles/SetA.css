@@ -43,11 +43,11 @@ ul li {
 ul li a {
   text-decoration: none;
   display: block;
-  padding: 0.5rem;
+  padding: 0.5rem 1.2rem;
   margin: 0 0.7rem;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   font-weight: 600;
   color: #333;
   transition: all 0.5s linear;
@@ -55,6 +55,8 @@ ul li a {
 
 ul li a:hover {
   font-style: italic;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   font-weight: 800;
   background-color: #8c5e58;
   color: aquamarine;
@@ -62,6 +64,8 @@ ul li a:hover {
 
 .active {
   font-style: italic;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
   font-weight: 800;
   background-color: #f2545b;
   color: blanchedalmond;
@@ -73,16 +77,34 @@ ul li a:hover {
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 1px;
+  cursor: pointer;
   border: 1px solid black;
   border-radius: 0.3rem;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    3px 3px 4px 8px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 3px 3px 4px 8px rgba(0, 0, 0, 0);
+  transition: all 0.7s ease-in-out;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  -webkit-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 }
+
+.btn:hover,
+.btn:active {
+  font-weight: 900;
+  font-style: italic;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* .............................................
+......................... TASK 1 ...............
+................................................ */
 
 /* Task 1 Specific */
 .set-1 {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .btn__cF {
@@ -92,35 +114,42 @@ ul li a:hover {
 
 .main-nav__cF {
   display: flex;
+  flex-wrap: wrap; /* Wrap nav bar options on smaller screen */
   align-items: center;
   background-color: bisque;
   justify-content: space-around;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  /* -webkit-box-shadow: 0px 10px 13px -7px #000000,
     3px 3px 4px 8px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 3px 3px 4px 8px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 3px 3px 4px 8px rgba(0, 0, 0, 0); */
 }
 
 .links__cF {
   display: flex;
+  flex-wrap: wrap-reverse; /* Reverse wrap options on smaller screen */
   align-items: center;
   justify-content: space-evenly;
 }
 
 .container--body__cF {
-  width: 400px;
+  width: 350px;
   background-color: transparent;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: 1px solid black;
   border-radius: 0.66rem;
   margin: 1rem auto;
   text-align: center;
   padding: 1rem;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    3px 3px 4px 8px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 3px 3px 4px 8px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .container--body__cF h3 {
@@ -128,3 +157,18 @@ ul li a:hover {
   font-weight: 700;
   margin-bottom: 1rem;
 }
+
+/* On bigger screen set button and its container in center */
+@media screen and (min-width: 554px) {
+  .container--body__cF {
+    width: 475px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* .............................................
+......................... TASK 2 ...............
+................................................ */
